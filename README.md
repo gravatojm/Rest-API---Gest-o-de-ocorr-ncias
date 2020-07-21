@@ -19,6 +19,7 @@ URLs:
   - Ocorrência: http://127.0.0.1:8000/occurrence/id/, onde id é o id da ocorrência.
   
 Especificações:
+  
   Uma ocorrência tem como atributos:
    - description - descrição da mesma;
    - lat - latitude (FLOAT);
