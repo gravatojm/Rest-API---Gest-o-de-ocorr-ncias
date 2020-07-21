@@ -7,19 +7,22 @@ Requisitos:
  - djangorestframework
  - django-filter
  
+ Base de Dados:
+  - SQLite
+ 
  Como correr o projecto:
   1) $ cd RestProject
   2) $ python manage.py runserver
 
 URLs:
   - Lista de todas as ocorrências: http://127.0.0.1:8000/occurrence/
-  - Ocorrência: http://127.0.0.1:8000/occurrence/<id>/, onde id é o id da ocorrência.
+  - Ocorrência: http://127.0.0.1:8000/occurrence/id/, onde id é o id da ocorrência.
   
 Especificações:
   Uma ocorrência tem como atributos:
    - description - descrição da mesma;
-   - lat - latitude;
-   - lon - longitude;
+   - lat - latitude (FLOAT);
+   - lon - longitude (FLOAT);
    - owner - autor da ocorrência;
    - initial_date - data e hora da criação da ocorrência;
    - edit_date - data e hora da última edição da ocorrência;
