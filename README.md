@@ -12,8 +12,8 @@ Requisitos:
   2) $ python manage.py runserver
 
 URLs:
-  Lista de todas as ocorrências: http://127.0.0.1:8000/occurrence/
-  Ocorrência: http://127.0.0.1:8000/occurrence/<id>/, onde id é o id da ocorrência.
+  - Lista de todas as ocorrências: http://127.0.0.1:8000/occurrence/
+  - Ocorrência: http://127.0.0.1:8000/occurrence/<id>/, onde id é o id da ocorrência.
   
 Especificações:
   Uma ocorrência tem como atributos:
@@ -27,8 +27,8 @@ Especificações:
    - category - categoria da ocorrência. Opções: [CONSTRUCTION, SPECIAL_EVENT, INCIDENT, WEATHER_CONDITION, ROAD_CONDITION].
    
 Permissões:
-  Listar ocorrências: todos.
-  Criar ocorrência: apenas utilizadores registados.
-  Editar ocorrência: um administrador pode editar todas as ocorrências, um utilizador normal só pode editar as ocorrências criadas por si.
+  - Listar ocorrências: todos.
+  - Criar ocorrência: apenas utilizadores registados.
+  - Editar ocorrência: um administrador pode editar todas as ocorrências, um utilizador normal só pode editar as ocorrências criadas por si.
 
 
