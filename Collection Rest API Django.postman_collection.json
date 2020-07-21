@@ -1,0 +1,327 @@
+{
+	"info": {
+		"_postman_id": "91e08a5d-209a-467f-b412-68b6d7eed7dc",
+		"name": "Collection Rest API Django",
+		"description": "Collection para o teste da API Rest para a gestão de ocorrências em ambiente urbano.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Ver todas as ocorrências",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/occurrence/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"occurrence",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar ocorrência",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "restapisuper",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "restapisuper",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Incidente 1\",\r\n    \"lat\": -1,\r\n    \"lon\": 1,\r\n    \"category\": \"CONSTRUCTION\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/occurrence/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"occurrence",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar ocorrência",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"state\": \"validado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/occurrence/1/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"occurrence",
+								"1",
+								""
+							]
+						},
+						"description": "Editar o campo de STATE de uma ocorrência.\r\nUm admin pode editar todas as ocorrências."
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "basic",
+				"basic": [
+					{
+						"key": "password",
+						"value": "restapisuper",
+						"type": "string"
+					},
+					{
+						"key": "username",
+						"value": "restapisuper",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "9769dc9e-5d43-4528-8a94-ec8df1263d82",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "392660e3-9128-4613-9edd-87ff64dca5b5",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Ver todas as ocorrências",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/occurrence/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"occurrence",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar ocorrência",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "restapisuper",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "restapisuper",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Incidente 2\",\r\n    \"lat\": -2.1,\r\n    \"lon\": 2.1,\r\n    \"category\": \"ROAD_CONDITION\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/occurrence/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"occurrence",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar ocorrência",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"state\": \"por validar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/occurrence/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"occurrence",
+								"2",
+								""
+							]
+						},
+						"description": "Editar o campo de STATE de uma ocorrência.\r\nUm user normal só pode editar as ocorrências criadas por ele."
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "basic",
+				"basic": [
+					{
+						"key": "password",
+						"value": "user1",
+						"type": "string"
+					},
+					{
+						"key": "username",
+						"value": "user1",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "49b9aa99-a408-4fa9-9869-94356248895a",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "63eb5ae4-2a8a-417d-9c76-8eab75d7a131",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "0d744ef2-eb14-4b54-af7d-7193c4933560",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "101302a8-50d1-45ec-b3a4-9d3dfd117876",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
