@@ -1,2 +1,2 @@
-# Rest-API---Gest-o-de-ocorr-ncias
+# Rest-API---Gestao-de-ocorrencias
 Rest API Django para gestão de ocorrências em ambiente urbano (Exercício)
